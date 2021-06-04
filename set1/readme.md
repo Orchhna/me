@@ -1,2 +1,1 @@
-TODO: Reflect on what you learned this week and what is still unclear.
-I 
+TODO: Reflect on what you learned this week and what is still unclear.Week 1: I struggled to follow the process, but I persevered. When stumbled upon a problem, I must continue onwards, even if it takes me back through loops. Note to self: keep re reading the instructions and ensure each step is correct. You are always discovering. 
