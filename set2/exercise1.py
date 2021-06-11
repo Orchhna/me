@@ -11,8 +11,11 @@ import platform
 # I think this will print "hello! Let's get started" by calling the print function.
 print("hello! Let's get started")  # it printed "hello! Let's get started"
 
+# I think its going to print out the list variable some_words.. 
+# Basically its going to identify some_words and put a string (the list) into it.  
 some_words = ['what', 'does', 'this', 'line', 'do', '?']
 
+# I think it going to change replace a word within the string. 
 for word in some_words:
     print(word)
 
