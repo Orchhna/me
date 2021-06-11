@@ -136,6 +136,8 @@ def loops_3():
 
     return number_square
 
+    # use the following concept
+
 
 def loops_4():
     """Make a block of numbers that rises left to right.
