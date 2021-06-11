@@ -7,7 +7,12 @@ def is_odd(a_number):
 
     Look into modulo division using the '%' operator as one way of doing this.
     """
-    return None
+
+    odd = True
+    if a_number % 2 == 0:
+        odd = False
+    the_answer = odd
+    return the_answer
 
 
 def fix_it(moves=True, should_move=True):
@@ -25,7 +30,13 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements. 
     As an extra challenge, see if you can get that down to three.
     """
-    return None
+
+    if moves and not should_move:
+        return "Duct Tape"
+    elif not moves and should_move:
+        return "WD-40"
+    elif moves == should_move:
+        return "No Problem"
 
 
 def loops_1a():
@@ -35,7 +46,13 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
+
+    array = []
+
+    for i in range(10):
+        array.append("*")
+
+    return array
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -45,7 +62,11 @@ def loops_1c(number_of_items=5, symbol="#"):
     string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    return None
+    items = []
+    for x in range(0, number_of_items):
+        items.append(symbol)
+
+    return items
 
 
 def loops_2():
@@ -66,7 +87,18 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+    star_square = []
+    for j in range(10):
+        array = []
+    for i in range(0, 10):
+        array.append("*")
+        star_square.append(array)
+
+    return star_square
+
+    # note: keep things consistent by using append throughout all the arrays.
+    # appends adds its argument as a single element to the end of a list
+    # array iterates over its arguments by adding each element to the list.
 
 
 def loops_3():
@@ -90,7 +122,19 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+
+    number_square = []  # makes an empty array
+    for i in range(10):  # loops 10 times
+        number_row = []  # empty array for the number of rows
+        for j in range(10):  # another loop of 10
+            number_row.append(
+                str(i)
+            )  # variable in this case the array we are appending to .append <--- put at the back of and i show how many times a loop has run.
+        number_square.append(
+            number_row
+        )  # this puts the number row into the number square array
+
+    return number_square
 
 
 def loops_4():
