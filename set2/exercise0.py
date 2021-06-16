@@ -43,7 +43,7 @@ def add_5(a_number):
         return a_number plus five
     except expressed in python, not english
     """
-    the_answer = a_number+5 
+    the_answer = a_number + 5
 
     return the_answer
 
@@ -71,8 +71,6 @@ def shout(a_string):
     """
     the_answer = a_string.upper()
 
-
-
     return the_answer
 
 
@@ -85,7 +83,7 @@ def really_shout(a_string):
     that you've reused the function you already wrote.
     Look up how to 'concatinate' strings to make this happen.
     """
-    the_answer = shout(a_string)+"!"
+    the_answer = shout(a_string) + "!"
 
     return the_answer
 
@@ -104,8 +102,6 @@ def shout_with_a_number(a_string, a_number):
     """
     the_answer = shout(a_string) + " " + str(a_number)
 
-
-
     return the_answer
 
 
@@ -118,7 +114,8 @@ so that you can use the debugger more easily.
 
 def minitest(f, args, expected):
     """Run a function with a list of args and print a response.
-
+    
+# (concept is similar to maths). 
     This is a helper. Don't edit it.
     """
     result = f(*args)

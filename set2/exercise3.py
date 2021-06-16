@@ -62,9 +62,10 @@ def loops_1c(number_of_items=5, symbol="#"):
     string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    items = []
-    for x in range(0, number_of_items):
-        items.append(symbol)
+
+    items = []  # creating an empty variable
+    for x in range(0, number_of_items):  # creating a string to put items inside
+        items.append(symbol)  # placing the item ( this case hastage symbols)
 
     return items
 
@@ -156,7 +157,15 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+
+    list = []
+    list_2 = []
+    for i in range(10):
+        list.append(str(i))
+    for j in range(10):
+        list_2.append(list)
+
+    return list_2
 
 
 def loops_5():
@@ -183,7 +192,15 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-    return None
+
+    list_one = []
+    for i in range(10):
+        list_two = []
+        for j in range(5):
+            list_two.append("(i{0},".format(i) + " j{0})".format(j))
+        list_one.append(list_two)
+
+    return list_one
 
 
 def loops_6():
@@ -206,7 +223,16 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    wedge = []
+    for i in range(10):  # y axis
+        x_axis = []
+        for j in range(i + 1):  # appending the value as an iteration
+            x_axis.append(
+                str(j)
+            )  # this appends the number value of j into the x axis list
+        wedge.append(x_axis)
+
+    return wedge
 
 
 def loops_7():
@@ -230,7 +256,14 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+
+    pyramid = []
+    for i in range(5):
+        row = "{0}{1}{0}".format(" " * (5 - i - 1), "*" * (i * 2 + 1))
+        pyramid.append(list(row))
+
+    print(pyramid)
+    return pyramid
 
 
 def little_printer(some_kind_of_list, exercise_name):
