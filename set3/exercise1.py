@@ -12,7 +12,13 @@ def loop_ranger(start, stop=None, step=1):
     The look up the docs for range(), you can answer this with just the range 
     function, but we'd like you to do it the long way, probably using a loop.
     """
-    return None
+    list = []
+    count = start
+    while count < stop:  # stop is just variable that can change
+        list.append(count)  # placing count into the empty list =[]
+        count = count + step  # is the iteration
+
+    return list
 
 
 def lone_ranger(start, stop, step):
@@ -20,7 +26,11 @@ def lone_ranger(start, stop, step):
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
-    return None
+    my_range = []
+    for i in range(start, stop, step):
+        my_range.append(i)
+
+    return my_range
 
 
 def two_step_ranger(start, stop):
@@ -29,7 +39,12 @@ def two_step_ranger(start, stop):
     Sometimes you want to hide complexity.
     Make a range function that always has a step size of 2
     """
-    return None
+
+    my_range = []
+    for i in range(start, stop, 2):
+        my_range.append(i)
+
+    return my_range
 
 
 def stubborn_asker(low, high):
@@ -40,7 +55,13 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
-    return None
+
+    x = int(input("ask a number"))
+    for i in range(low, high):
+        while (low > x) or (x < high):
+            x = int(input("ask a number"))
+
+    return x
 
 
 def not_number_rejector(message):
