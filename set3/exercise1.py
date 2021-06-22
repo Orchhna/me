@@ -89,7 +89,17 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-    return None
+    while True:
+        try:
+            input_number = int(input(" give me a number "))
+            x = int(input("ask a number"))
+            for i in range(low, high):
+                while (low > x) or (x < high):
+                    x = int(input("ask a number"))
+            print("yep its a number")
+            return input_number
+        except Exception as e:
+            print("error its not a number")
 
 
 if __name__ == "__main__":
