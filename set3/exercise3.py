@@ -28,17 +28,17 @@ def advancedGuessingGame():
     print("\nWelcome to the guessing game!")
     print("A number between _ and 20 ?")
     lowerBound = input("Enter a lower bound: ")
-    print("OK then, a number between {} and 20 ?".format(lowerBound))
+    print(f"OK then, a number between {lowerBound} and 20 ?")
     lowerBound = int(lowerBound)
     actualNumber = random.randint(lowerBound, 20)
 
     while True:
         try:
             guessedNumber = int(input("Guess a number: "))
-            print("You guessed {},".format(guessedNumber),)
+            print(f"You guessed {guessedNumber}")
 
             if guessedNumber == actualNumber:
-                print("You got it!! It was {}".format(actualNumber))
+                print(f"You got it!! It was {actualNumber}")
                 return "You Rock!"
 
             elif guessedNumber < actualNumber:
@@ -47,7 +47,7 @@ def advancedGuessingGame():
                 print("Too big, try again :'(")
 
         except Exception as e:
-            print("that ain`t a number")
+            print("error! {e} is not a number")
 
 
 if __name__ == "__main__":
