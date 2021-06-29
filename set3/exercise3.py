@@ -45,8 +45,8 @@ def advancedGuessingGame():
             else:
                 print("Too big, try again :'(")
 
-        except ValueError as e:
-            print(f"error {e} is not a number")
+        except Exception as e:
+            print(f"error this not a number{e}")
 
 
 if __name__ == "__main__":
