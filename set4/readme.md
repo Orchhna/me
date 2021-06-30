@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+Re-searched a dataset about cyptocurrencies, but it did not have enough entries as it was less than 300 rows. I also realised that if I wanted to anaylse the data, I would need to think about it financially. Therefor, with limited knowledge about the industry, I ditch the topic. I then found a dataset about Ramen. It has more than a 1000 entries there it would be an ideal dataset.
