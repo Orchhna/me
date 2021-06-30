@@ -4,6 +4,7 @@ Steps on the way to making your own guessing game.
 """
 
 import random
+from typing_extensions import Type
 
 
 def advancedGuessingGame():
@@ -25,28 +26,52 @@ def advancedGuessingGame():
     Remember to think modular. Try to keep your functions small and single
     purpose if you can!
     """
-    print("\nWelcome to the guessing game!")
-    print("A number between _ and 20 ?")
-    lowerBound = int(input("Enter a lower bound: "))
-    print(f"OK then, a number between {lowerBound} and 20 ?")
-    actualNumber = random.randint(lowerBound, 20)
 
-    while True:
+    print("\nWelcome to the guessing game!")
+
+    bounds = False
+    while not bounds:
         try:
-            guessedNumber = int(input("Guess a number: "))
+
+            print("A number between _ and 20 ?")
+            lowerBound = input("Enter a lower bound: ")
+            lowerBound = int(lowerBound)
+            print(f"OK then, a number between {lowerBound} and 20 ?")
+            bounds = True
+
+        except (ValueError, TypeError):
+            print("enter a number")
+
+    actualNumber = random.randint(lowerBound, 20)
+    guessed = False
+
+    while not guessed:
+
+        try:
+            guessedNumber = input("Guess a number: ")
+            guessedNumber = int(guessedNumber)
             print(f"You guessed {guessedNumber}")
 
             if guessedNumber == actualNumber:
                 print(f"Correct! It was {actualNumber}")
-                return "You got it!"
+                guessed = True
+
+            elif guessedNumber < lowerBound or guessedNumber > 20:
+                print("number outside the bound")
 
             elif guessedNumber < actualNumber:
                 print("Too small, try again :'(")
+
             else:
                 print("Too big, try again :'(")
 
-        except Exception as e:
-            print(f"error this not a number{e}")
+        except (
+            ValueError,
+            TypeError,
+        ):
+            print("error this not a number")
+
+    return "You got it!"
 
 
 if __name__ == "__main__":
