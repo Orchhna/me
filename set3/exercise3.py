@@ -25,7 +25,7 @@ def super_asker(low, high):
             else:
                 print(f" {x} is not between {low} and {high} ")
 
-        except ValueError:
+        except (ValueError, TypeError):
             print("error is not a number")
 
 
