@@ -159,6 +159,8 @@ def diarist():
          the test will have nothing to look at.
     TIP: this might come in handy if you need to hack a 3d print file in the future.
     """
+    # write code here
+
     mode = "r"
     count = 0
     with open("set4\Trispokedovetiles(laser).gcode", mode, encoding="utf-8") as gc:

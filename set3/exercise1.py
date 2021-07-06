@@ -48,6 +48,7 @@ def two_step_ranger(start, stop):
 
 
 def stubborn_asker(low, high):
+
     """Ask for a number between low and high until actually given one.
 
     Ask for a number, and if the response is outside the bounds keep asking
@@ -55,13 +56,12 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
+    while True:
+        x = int(input(f"give a number between {low} and {high} "))
 
-    x = int(input("ask a number"))
-    for i in range(low, high):
-        while (low > x) or (x < high):
-            x = int(input("ask a number"))
-
-    return x
+        if low < x < high:
+            print("yep its a number")
+            return x
 
 
 def not_number_rejector(message):
@@ -91,13 +91,14 @@ def super_asker(low, high):
     """
     while True:
         try:
-            input_number = int(input(" give me a number "))
-            x = int(input("ask a number"))
-            for i in range(low, high):
-                while (low > x) or (x < high):
-                    x = int(input("ask a number"))
-            print("yep its a number")
-            return input_number
+
+            x = int(input(f"give a number between {low} and {high} "))
+            if low < x < high:
+                print("yep its a number")
+                return x
+            else:
+                print(f" {x} is not between {low} and {high} ")
+
         except Exception as e:
             print("error its not a number")
 

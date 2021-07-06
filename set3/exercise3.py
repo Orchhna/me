@@ -7,6 +7,28 @@ import random
 from typing_extensions import Type
 
 
+def super_asker(low, high):
+    """Robust asking function.
+
+    Combine what you learnt from stubborn_asker and not_number_rejector
+    to make a function that does it all!
+    Try to call at least one of the other functions to minimise the
+    amount of code.
+    """
+    while True:
+        try:
+
+            x = int(input(f"give a number between {low} and {high} "))
+            if low < x < high:
+                print("yep its a number")
+                return x
+            else:
+                print(f" {x} is not between {low} and {high} ")
+
+        except ValueError:
+            print("error is not a number")
+
+
 def advancedGuessingGame():
     """Play a guessing game with a user.
 
@@ -29,49 +51,26 @@ def advancedGuessingGame():
 
     print("\nWelcome to the guessing game!")
 
-    bounds = False
-    while not bounds:
-        try:
+    lowerBound = super_asker(-1000, 1000)
+    upperBound = super_asker(lowerBound, 1000)
 
-            print("A number between _ and 20 ?")
-            lowerBound = input("Enter a lower bound: ")
-            lowerBound = int(lowerBound)
-            print(f"OK then, a number between {lowerBound} and 20 ?")
-            bounds = True
+    actualNumber = random.randint(lowerBound, upperBound)
 
-        except (ValueError, TypeError):
-            print("enter a number")
+    while True:
+        print("Guess a number: ")
+        guessedNumber = super_asker(lowerBound, upperBound)
+        print(f"You guessed {guessedNumber}")
 
-    actualNumber = random.randint(lowerBound, 20)
-    guessed = False
+        if guessedNumber == actualNumber:
+            print(f"Correct! It was {actualNumber}")
+            return "You got it!"
 
-    while not guessed:
-
-        try:
-            guessedNumber = input("Guess a number: ")
-            guessedNumber = int(guessedNumber)
-            print(f"You guessed {guessedNumber}")
-
-            if guessedNumber == actualNumber:
-                print(f"Correct! It was {actualNumber}")
-                guessed = True
-
-            elif guessedNumber < lowerBound or guessedNumber > 20:
-                print("number outside the bound")
-
-            elif guessedNumber < actualNumber:
-                print("Too small, try again :'(")
-
-            else:
-                print("Too big, try again :'(")
-
-        except (
-            ValueError,
-            TypeError,
-        ):
-            print("error this not a number")
-
-    return "You got it!"
+        elif guessedNumber < actualNumber:
+            print("Too small, try again 😢")
+        elif guessedNumber > actualNumber:
+            print("Too big, try again 🤔")
+        else:
+            print("something gone wrong")
 
 
 if __name__ == "__main__":
