@@ -114,7 +114,7 @@ def pokedex(low=1, high=5):
     Using the Pokemon API: https://pokeapi.co get some JSON using the request library
     (a working example is filled in below).
     Parse the json and extract the values needed.
-    
+
     TIP: reading json can someimes be a bit confusing. Use a tool like
          http://www.jsoneditoronline.org/ to help you see what's going on.
     TIP: these long json accessors base["thing"]["otherThing"] and so on, can
@@ -163,14 +163,19 @@ def diarist():
 
     mode = "r"
     count = 0
+
     with open("set4\Trispokedovetiles(laser).gcode", mode, encoding="utf-8") as gc:
         lines = gc.readlines()
 
-    for line in lines:
-        if lines[:2] == "M10":
-            count += 1
-        print(line)
-    print(count)
+        for line in lines:
+            if "M10" in line:
+                count = count + 1
+    mode = "w"
+    with open("set4/laser.pew", mode, encoding="utf-8") as s:
+        shoot = s.write(str(count))
+        for line in shoot:
+            print(shoot)
+        return shoot
 
 
 if __name__ == "__main__":
