@@ -175,7 +175,7 @@ def diarist():
     # way 2
     #counter = len([x for x in lines if "M10 P1" in x])
 
-    out_file_path = "set.4/laser.pew"
+    out_file_path = "set.4/lasers.pew"
     with open(out_file_path, "w", encoding="utf-8") as f:
         pass
 
