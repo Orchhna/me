@@ -177,6 +177,7 @@ def diarist():
 
     out_file_path = "set.4/laser.pew"
     with open(out_file_path, "w", encoding="utf-8") as f:
+        pass
 
 
 if __name__ == "__main__":
