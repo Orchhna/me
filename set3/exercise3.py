@@ -19,7 +19,7 @@ def super_asker(low, high):
         try:
 
             x = int(input(f"give a number between {low} and {high} "))
-            if low < x < high:
+            if low <= x <= high:
                 print("yep its a number")
                 return x
             else:
@@ -51,14 +51,15 @@ def advancedGuessingGame():
 
     print("\nWelcome to the guessing game!")
 
-    lowerBound = super_asker(-1000, 1000)
-    upperBound = super_asker(lowerBound, 1000)
+    lowerBound = super_asker(-100, 100)
+    upperBound = super_asker(lowerBound, 100)
 
     actualNumber = random.randint(lowerBound, upperBound)
 
     while True:
         print("Guess a number: ")
         guessedNumber = super_asker(lowerBound, upperBound)
+
         print(f"You guessed {guessedNumber}")
 
         if guessedNumber == actualNumber:
