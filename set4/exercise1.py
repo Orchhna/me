@@ -169,7 +169,7 @@ def diarist():
     counter = 0
     for line in lines:
         if "M10 P1" in lines:
-            counter = +1
+            counter += 1
     print(counter)
 
     # way 2
