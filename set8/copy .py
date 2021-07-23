@@ -16,6 +16,8 @@ from typing import Dict, List
 
 def give_me_five() -> int:
     """Returns the integer five."""
+    x = int(5)
+    return x
 
 
 def password_please() -> str:
@@ -23,38 +25,59 @@ def password_please() -> str:
     least one upper case letter and one lowercase letter.
     TIP: don't put in a real password!"""
 
-    return None
+    num = str("My dog ate my cat")
+    password_please = num
+
+    return password_please
 
 
 def list_please() -> list:
     """Returns a list, you can put anything in the list."""
-    return None
+
+    list_please = ["apples", "pears", "oranges"]
+    return list_please
 
 
 def int_list_please() -> list:
     """Returns a list of integers, any integers are fine."""
-    return None
+
+    numbers = [i for i in range(10, 20)]
+    int_list_please = numbers
+
+    return int_list_please
 
 
 def string_list_please() -> list:
     """Returns a list of strings, any string are fine."""
-    return None
+
+    colours = ["blue, yellow, green"]
+    string_list_please = colours
+    return string_list_please
 
 
 def dictionary_please() -> dict:
     """Returns a dictionary, anything you like."""
-    return None
+    dictionary_please = {1: "blue", 2: "green", 3: "yellow"}
+    return dictionary_please
 
 
 def is_it_5(some_number) -> bool:
     """Returns True if the argument passed is 5, otherwise returns False."""
-    well_is_it = None
-    return well_is_it
+
+    word = ["fives", "cats"]
+    if len(word) == 5:
+        some_number = True
+    else:
+        if len(word) < 5:
+            some_number = False
+    return some_number
 
 
 def take_five(some_number) -> int:
     """Subtracts 5 from some_number."""
-    return None
+
+    number = some_number - 5
+    return number
 
 
 def greet(name="Towering Timmy") -> str:
@@ -63,7 +86,10 @@ def greet(name="Towering Timmy") -> str:
     E.g. if given as "Towering Timmy" it should
          return "Well hello, Towering Timmy"
     """
-    return None
+
+    greeting = str("Well hello, ")
+    greet = greeting + name
+    return greet
 
 
 def one_counter(input_list=[1, 4, 1, 5, 1, 1]) -> int:
@@ -71,7 +97,10 @@ def one_counter(input_list=[1, 4, 1, 5, 1, 1]) -> int:
     Return an integer.
     TIP: the test will use a different input_list, so don't just return 2
     """
-    count = None
+    count = 0
+    for 1 in input:
+        if 1 in one_counter:
+            count = +1
 
     return count
 
@@ -231,12 +260,9 @@ def fast_filler(number_of_words=200) -> str:
 if __name__ == "__main__":
     print("give_me_five", give_me_five(), type(give_me_five()))
     print(
-        "strong_password_please",
-        password_please(),
-        type(password_please()) == str,
+        "strong_password_please", password_please(), type(password_please()) == str,
     )
-    print("int_list_please", int_list_please(),
-          type(int_list_please()) == list)
+    print("int_list_please", int_list_please(), type(int_list_please()) == list)
     print(
         "string_list_please", string_list_please(), type(string_list_please()) == list
     )
