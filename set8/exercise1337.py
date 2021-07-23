@@ -172,7 +172,7 @@ def pet_filter(letter="a") -> List:
     # fmt: on
     filtered = []
     for pet in pets:
-        if letter in pets:
+        if letter in pet:
             filtered.append(pet)
 
     return filtered
