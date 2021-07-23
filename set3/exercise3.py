@@ -49,7 +49,7 @@ def advancedGuessingGame():
     purpose if you can!
     """
 
-    print("\nWelcome to the guessing game!")
+    print("\nWelcome to Orchi`s Guessing Game!")
 
     lowerBound = super_asker(-100, 100)
     upperBound = super_asker(lowerBound, 100)
