@@ -58,13 +58,17 @@ def dictionary_please() -> dict:
 
 def is_it_5(some_number) -> bool:
     """Returns True if the argument passed is 5, otherwise returns False."""
-    word = ["fives", "cats"]
-    if len(word) == 5:
-        some_number = True
-    else:
-        if len(word) < 5:
+
+    word = ["parrots"]
+
+    while True:
+
+        if len(word) >= 5:
+            some_number = True
+        elif len(word) < 5:
             some_number = False
-    return some_number
+
+        return some_number
 
 
 def take_five(some_number) -> int:
@@ -89,18 +93,18 @@ def one_counter(input_list=[1, 4, 1, 5, 1, 1]) -> int:
     Return an integer.
     TIP: the test will use a different input_list, so don't just return 2
     """
-    count = None
-
-    return count
+    i = int(1)
+    if i in input_list:
+        counter = input_list.count(i)
+    return counter
 
 
 def n_counter(search_for_this, input_list=[1, 4, 1, 5, 1, 1]) -> int:
     """Count the number of times search_for_this shows up in the input_list.
     Return an integer.
     """
-    count = None
-
-    return count
+    counter = input_list.count(search_for_this)
+    return counter
 
 
 def fizz_buzz() -> List:
@@ -122,8 +126,15 @@ def fizz_buzz() -> List:
          'FizzBuzz', 16, 17, ...]
     """
     fizz_buzz_list = []
-    # your code here
-
+    for x in range(1, 101):
+        if x % 3 == 0 and x % 5 == 0:
+            fizz_buzz_list.append("FizzBuzz")
+        elif x % 3 == 0:
+            fizz_buzz_list.append("Fizz")
+        elif x % 5 == 0:
+            fizz_buzz_list.append("Buzz")
+        else:
+            fizz_buzz_list.append(x)
     return fizz_buzz_list
 
 
@@ -139,7 +150,10 @@ def set_it_on_fire(input_string="very naughty boy") -> str:
     TIP: make sure that you have a 🔥 on both ends of the string.
     """
 
-    return None
+    list_1 = list(" " + input_string + " ")
+    interlist = "🔥".join(list_1).upper().strip()
+
+    return interlist
 
 
 def pet_filter(letter="a") -> List:
@@ -157,6 +171,9 @@ def pet_filter(letter="a") -> List:
     ]
     # fmt: on
     filtered = []
+    for pet in pets:
+        if letter in pets:
+            filtered.append(pet)
 
     return filtered
 
