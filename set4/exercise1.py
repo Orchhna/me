@@ -83,8 +83,7 @@ def wordy_pyramid():
     """
     pyramid = []
     for x in range(3, 20, 2):
-        url = (
-            "https://us-central1-waldenpondpress.cloudfunctions.net/"
+        url = ( "https://us-central1-waldenpondpress.cloudfunctions.net/"
             "give_me_a_word?"
             f"wordlength={x}"
         )
