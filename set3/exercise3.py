@@ -48,6 +48,7 @@ def advancedGuessingGame():
     Remember to think modular. Try to keep your functions small and single
     purpose if you can!
     """
+    # type code
 
     print("\nWelcome to Orchi`s Guessing Game!")
 
