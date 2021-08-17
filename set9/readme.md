@@ -5,3 +5,4 @@ Researching ways to visualise data.
 - bar graph
 - word cloud
 - heatmaps
+  ..
